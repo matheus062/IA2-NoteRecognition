@@ -6,11 +6,17 @@ DURATION = 0.1
 NUM_SEGMENTS = 10
 SAMPLES_PER_TRACK = SAMPLE_RATE * DURATION
 
+# SAMPLE_RATE = 22050
+# DURATION = 1
+# NUM_SEGMENTS = 100
+# SAMPLES_PER_TRACK = SAMPLE_RATE * DURATION
+
 if __name__ == "__main__":
     print("Pre processing sample...")
     num_samples_per_segment = int(SAMPLES_PER_TRACK / NUM_SEGMENTS)
-    # signal, sr = librosa.load("sample.wav", sr=SAMPLE_RATE)
-    signal, sr = librosa.load("output.wav", sr=SAMPLE_RATE)
+    signal, sr = librosa.load("sample.wav", sr=SAMPLE_RATE)
+    # signal, sr = librosa.load("output.wav", sr=SAMPLE_RATE)
+    # signal, sr = librosa.load("chorao_32.wav", sr=SAMPLE_RATE)
     data = {
         "mfcc": []
     }
